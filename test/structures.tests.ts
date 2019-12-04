@@ -17,4 +17,4 @@ describe("Data structures", () => {
     //         expect(result).to.be.an.instanceOf(Queue);
     //     })
     // })
-})
+});
