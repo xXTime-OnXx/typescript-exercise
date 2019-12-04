@@ -15,6 +15,28 @@ describe("Data structures", () => {
             const result = testee.size();
             expect(result).to.equal(1);
         });
+
+        it("has enqueue item", () => {
+            const testee = new Queue();
+            const enqueueItem = "first";
+            testee.enqueue(enqueueItem);
+            const result = testee.peek();
+            expect(result).to.equal(enqueueItem);
+        });
+
+        it("remove item", () => {
+            const testee = new Queue();
+            const enqueueItem = "first";
+            testee.enqueue(enqueueItem);
+            const result = testee.poll();
+            expect(result).to.equal(enqueueItem);
+            expect(testee.size()).to.equal(0);
+        });
+
+        it("is empty", () => {
+            const testee = new Queue();
+            expect(testee.isEmpty()).to.be.true;
+        });
     });
 
     // describe("Factory", () => {
